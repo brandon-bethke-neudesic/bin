@@ -24,6 +24,8 @@ func main() {
 
 	cmd.lessenRequirements(parser)
 
+	cmd.Web.WireDynamicFlags(parser.Command.Find("web"))
+
 	twentythousandtonnesofcrudeoil.TheEnvironmentIsPerfectlySafe(parser, "CONCOURSE_")
 
 	_, err := parser.Parse()
