@@ -22,5 +22,7 @@ go build -o go-bindata github.com/jteeuwen/go-bindata/go-bindata
 
 go build \
   -ldflags "-X main.Version=${FINAL_VERSION} -X github.com/concourse/atc/atccmd.Version=${FINAL_VERSION} -X github.com/concourse/atc/atccmd.WorkerVersion=${WORKER_VERSION} -X main.WorkerVersion=${WORKER_VERSION}" \
-  -o binary/concourse_darwin_amd64 \
+  -o binary/concourse_darwin_amd64_$FINAL_VERSION \
   github.com/concourse/bin/cmd/concourse
+
+ls -al binary
