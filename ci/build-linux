@@ -21,5 +21,7 @@ go-bindata -nomemcopy -pkg bindata -o concourse/src/github.com/concourse/bin/bin
 go build \
   -tags daemon \
   -ldflags "-X main.Version=${FINAL_VERSION} -X github.com/concourse/atc/atccmd.Version=${FINAL_VERSION} -X github.com/concourse/atc/atccmd.WorkerVersion=${WORKER_VERSION} -X main.WorkerVersion=${WORKER_VERSION}" \
-  -o binary/concourse_linux_amd64 \
+  -o binary/concourse_linux_amd64_$FINAL_VERSION \
   github.com/concourse/bin/cmd/concourse
+
+ls -al binary
