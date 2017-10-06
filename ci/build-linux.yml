@@ -9,6 +9,7 @@ inputs:
 - name: concourse
 - name: garden-runc-release
 - name: fly-rc
+- name: version
 - name: final-version
 
 outputs:
